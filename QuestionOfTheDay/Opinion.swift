@@ -10,19 +10,18 @@ import Foundation
 @objcMembers
 class Opinion : NSObject {
     var answer : Int?
-    var created:NSDate?
-    var updated:NSDate?
     var objectId:String?
-    var question : QuestionOfTheDay?
+  
     override init() {
         super.init()
         self.answer = 0
-        self.question = QuestionOfTheDay()
+       
     }
-    init(answer : Int , question : QuestionOfTheDay){
+    init(answer : Int ){
         self.answer = answer
-        self.question = question
+        
     }
+   
     override var description: String {
         return "Submitted response is : \(self.answer!)"
    }

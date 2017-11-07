@@ -51,8 +51,9 @@ class Statistician {
         questionObj = dataStoreQuestionOfTheDay?.find(byId: "7C95C868-DBE6-FD17-FFF4-BEE598578200") as! QuestionOfTheDay
             return questionObj
     }
-    func saveOpinion(opinion : Int) {
-        self.dataStoreOpinion?.save(opinion)
+    func saveOpinion(opinion : Opinion) {
+       
+        self.dataStoreOpinion!.save(opinion)
         
     }
     func retriveAllOpinions() -> [Opinion]{
