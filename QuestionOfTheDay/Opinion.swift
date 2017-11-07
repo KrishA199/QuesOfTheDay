@@ -25,5 +25,11 @@ class Opinion : NSObject {
     }
     override var description: String {
         return "Submitted response is : \(self.answer!)"
-    }
+   }
+//    dataStoreQuestionOfTheDay.find({ (questionAndOptions)->Void in
+//    return questionAndOptions as! QuestionOfTheDay
+//    }, error:{(fault:Fault?) ->Void in
+//    print(fault!)})
+//    return ""
+
 }
