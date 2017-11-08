@@ -21,11 +21,20 @@ class StatisticsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        var statisticsInstance = Statistician()
-        questionLBL.text = statisticsInstance.fetchQuestionOfTheDay().question
-        answer0LBL.text = statisticsInstance.fetchQuestionOfTheDay().answer0
-        answer1LBL.text = statisticsInstance.fetchQuestionOfTheDay().answer1
-        answer2LBL.text = statisticsInstance.fetchQuestionOfTheDay().answer2
+        let statisticsInstance = Statistician()
+        let ques : String = statisticsInstance.fetchQuestionOfTheDay().question!
+        let ans0 : String = statisticsInstance.fetchQuestionOfTheDay().answer0!
+        let ans1 : String = statisticsInstance.fetchQuestionOfTheDay().answer1!
+        let ans2 : String = statisticsInstance.fetchQuestionOfTheDay().answer2!
+        
+        
+        
+            
+        print(ques)
+        questionLBL.text = ques
+        answer0LBL.text = ans0
+        answer1LBL.text = ans1
+        answer2LBL.text = ans2
         var percents = statisticsInstance.findPercentage()
         per0LBL.text = "\(percents[0])"
         per1LBL.text = "\(percents[1])"
@@ -38,7 +47,14 @@ class StatisticsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        let statisticsInstance = Statistician()
+        var percents = statisticsInstance.findPercentage()
+        per0LBL.text = "\(percents[0])"
+        per1LBL.text = "\(percents[1])"
+        per2LBL.text = "\(percents[2])"
+        
+    }
     /*
     // MARK: - Navigation
 

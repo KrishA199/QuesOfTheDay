@@ -9,21 +9,22 @@ import Foundation
 
 @objcMembers
 class Opinion : NSObject {
-    var answer : Int?
+    var answer : Int
     var objectId:String?
   
     override init() {
-        super.init()
+        
         self.answer = 0
        
     }
-    init(answer : Int ){
+     init(answer : Int ){
+        
         self.answer = answer
         
     }
    
     override var description: String {
-        return "Submitted response is : \(self.answer!)"
+        return "Submitted response is : \(self.answer)"
    }
 //    dataStoreQuestionOfTheDay.find({ (questionAndOptions)->Void in
 //    return questionAndOptions as! QuestionOfTheDay

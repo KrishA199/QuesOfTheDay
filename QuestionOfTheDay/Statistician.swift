@@ -31,7 +31,7 @@ class Statistician {
         var totalOpinions : Double = 0.0
         opinions = retriveAllOpinions()
         for opinion in opinions {
-            switch opinion.answer! {
+            switch opinion.answer {
             case 0 : option0 = option0 + 1
             case 1 :option1 = option1 + 1
             case 2 :option2 = option2 + 1
